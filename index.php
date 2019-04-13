@@ -1,4 +1,4 @@
-<?php 
+<?php
     include "inc/head.php";
     include "inc/header.php";
 
@@ -8,11 +8,11 @@
         "UX" => ["Curso de User Experience", 9000.98, "ux.jpg", "ux"],
         "Mobile Android" => ["Curso de apps", 1000.97, "android.png", "android"]
     ];
+
     
 ?>
 
-
-    
+   
 
     <div class="container">
         <div class="row">
@@ -81,5 +81,5 @@
             <?php endforeach; ?>
         </div>
     </div>
-    
-<?php include "inc/footer.php";?>
+
+<?php include "inc/footer.php"; ?>
