@@ -1,6 +1,6 @@
 <?php
     $usuario = [
-        "Nome" => "Thomaz",
+        "Nome" => "Américo",
         "Email" => "teste@teste.com",
         "Senha" => "123456",
         "NivelAcesso" => mt_rand(0, 1)

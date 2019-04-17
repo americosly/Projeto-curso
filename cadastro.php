@@ -8,13 +8,30 @@
         $email = $_REQUEST["email"];
         $senha = $_REQUEST["senha"];
         $confirmarSenha = $_REQUEST ["confirmarSenha"];
+        // Testes
+        $hash = password_hash($senha,PASSWORD_DEFAULT);
+        echo $hash;
+      
+    
+    
+    
+    
+    // aqui estou criando uma criptografia na minha senha usando md5
+     //     $cadastro = md5($senha);
+    //     $login = md5($senha);
+    //     echo $cadastro . "<br>";
+    //     echo $login;
+    //    exit;
+        
         // verifica se a senha é igual ao confirmar senha
         if ($senha == $confirmarSenha){
+
+            $senhaCrip = password_hash($senha, PASSWORD_DEFAULT);
             // criando um novo usuário
             $novoUsuario = [
                 "nome" => $nome,
                 "email" => $email,
-                "senha" =>  $senha,
+                "senha" =>  $senhaCrip,
             ];
             // cadastro um novo Usuário no Json
             $cadastrou = cadastrarUsuario($novoUsuario);

@@ -1,7 +1,7 @@
 <?php 
     include "inc/head.php";
     include "inc/header.php";
-    require "inc/funcoes.php";
+    require "req/funcoesValidacao.php";
     // variáveis
     $nome = $_REQUEST["nomeCompleto"];
     $cpf = $_REQUEST["cpf"];
@@ -11,6 +11,8 @@
     $nomeCurso = $_REQUEST["nomeCurso"];
     $precoCurso = $_REQUEST["precoCurso"]; 
     $erros = [];
+
+    
 
     validarCompra($nome, $cpf, $nroCartao, $validade, $cvv);
 ?>
@@ -54,4 +56,4 @@
             <?php endif; ?>
         </div>
     </div>
-    <?php include "inc/footer.php"; ?>
+<?php include "inc/footer.php"; ?>
