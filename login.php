@@ -7,9 +7,20 @@
         $email = $_REQUEST["email"];
         $senha = $_REQUEST["senha"];
         // verificando se o usuário esta logado da função
-        $estaLogado = logarUsuario ($email,$senha);
+        $nomeLogado = logarUsuario ($email,$senha);
 
-        if ($estaLogado == true){
+        if ($nomeLogado == true){
+            // cria a sessão
+            session_start();
+            // criando o campo nome na sessão
+            $_SESSION["nome"] = $nomeLogado;
+            // criando o campo e-mail na sessão
+            $_SESSION["email"] = $email;
+            // Criando o campo nivelAcesso
+            $_SESSION["nivelAcesso"] = mt_rand(0,1);
+            // cria o campo logado na sessão
+            $_SESSION["logado"] = true;
+            // redirecionando o usuário para a pagina index
             header("Location: index.php");
         } else {
             $erro = "Seu usuário não foi encontrado!";
