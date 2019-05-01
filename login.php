@@ -52,7 +52,7 @@
         
         <div class="col-md-12 ">
             <button type="submit" class="btn btn-primary">Logar</button>
-            <a href="login.php" class="col-md-offset-9">Cadastre-se</a>
+            <a href="cadastro.php" class="col-md-offset-9">Cadastre-se</a>
         </div>
     </form>
 </div>
