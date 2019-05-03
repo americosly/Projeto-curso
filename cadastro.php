@@ -1,4 +1,5 @@
 <?php
+    require "req/database.php";
     require "req/funcoesLogin.php";
     include "inc/head.php";
 
@@ -10,7 +11,7 @@
         $confirmarSenha = $_REQUEST ["confirmarSenha"];
         // Testes
         $hash = password_hash($senha,PASSWORD_DEFAULT);
-        echo $hash;
+      
       
     
     
@@ -48,7 +49,7 @@
     <?php 
     //  verifica se a variavel cadastrou foi definida
         if(isset ($cadastrou) && $cadastrou): ?>
-            <div class"alert alert-success" role="alert">
+            <div class="alert alert-success" role="alert">
                 <span>Usuário cadastrado com sucesso!</span>
             </div>
             <!-- Verifica se a variavel erro foi definida -->
